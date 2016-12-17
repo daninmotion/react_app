@@ -1,6 +1,8 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
 
+{/* this is how you write comments. It has to be inside the curly bracets*/}
+
 var App = function () { 
 	return (
 		<div className = 'app-container'>

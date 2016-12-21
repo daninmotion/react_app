@@ -1,17 +1,17 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+var Landing = require('./Landing')
+var Search = require('./Search.jsx')
+var {Router, Route, hashHistory} = require('react-router')
 
 {/* this is how you write comments. It has to be inside the curly bracets*/}
 
 var App = function () { 
 	return (
-		<div className = 'app-container'>
-			<div className = 'home-info'>
-				<h1 className = 'title'>svideo</h1>
-				<input className = 'search' type = 'text' placeholder = 'Search' />
-				<button className = 'browse-all'> or Browse All </button>
-			</div>
-		</div>
+		<Router history = {hashHistory}>
+			<Route path = '/' component = {Landing} />
+			<Route path = '/search' component = {Search} />
+		</Router>
 	)
 }
 
